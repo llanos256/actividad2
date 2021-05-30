@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comparendos</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Valor</th>
+      <th>Fecha</th>
+      <th>Estado</th>
+      <th>Prestamo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comparendos.each do |comparendo| %>
+      <tr>
+        <td><%= comparendo.valor %></td>
+        <td><%= comparendo.fecha %></td>
+        <td><%= comparendo.estado %></td>
+        <td><%= comparendo.Prestamo_id %></td>
+        <td><%= link_to 'Show', comparendo %></td>
+        <td><%= link_to 'Edit', edit_comparendo_path(comparendo) %></td>
+        <td><%= link_to 'Destroy', comparendo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comparendo', new_comparendo_path %>
