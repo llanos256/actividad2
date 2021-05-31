@@ -1,13 +1,13 @@
 
 <br>
 <h3>  Usuarios con prestamos</h3>
-
-  <select name="" id="">
+<div class="form-group col-md-2">
+  <select class="form-select" name="" id="">
      <option selected>  Usuarios  </option>
      <% @usuarios.each do |t| %>
        <option value="<%= t.id %>"> <%= t.nombres + " " + t.apellidos%> </option>
     <%end%>
   </select>
-
+<div>
 <br><br>
 <%= link_to 'Back', usuarios_path %>
