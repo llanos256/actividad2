@@ -3,7 +3,7 @@ class UsuariosController < ApplicationController
 
   # GET /usuarios or /usuarios.json
   def index
-    @usuarios = Usuario.all
+    @usuarios= Usuario.all
   end
 
   # GET /usuarios/1 or /usuarios/1.json
@@ -17,6 +17,9 @@ class UsuariosController < ApplicationController
 
   # GET /usuarios/1/edit
   def edit
+  end
+  def search
+    @usuarios= Usuario.all
   end
 
   # POST /usuarios or /usuarios.json
