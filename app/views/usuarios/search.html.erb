@@ -1,13 +1,18 @@
 
 <br>
-<h3>  Usuarios con prestamos</h3>
+<h4>  Usuarios con prestamos</h4>
+<form action=>
 <div class="form-group col-md-2">
-  <select class="form-select" name="" id="">
+  <select class="form-select" name="u" id="u">
      <option selected>  Usuarios  </option>
      <% @usuarios.each do |t| %>
        <option value="<%= t.id %>"> <%= t.nombres + " " + t.apellidos%> </option>
     <%end%>
   </select>
 <div>
+<br>
+  <button class ="btn btn-primary" > Buscar</button>
+  </form>
 <br><br>
 <%= link_to 'Back', usuarios_path %>
+
